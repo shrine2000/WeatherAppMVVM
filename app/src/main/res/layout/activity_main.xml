@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_background"
+    android:padding="8dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_location"
+            android:layout_width="30dp"
+
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:src="@drawable/ic_outline_location_on_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_location"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_city_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="just updated"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <ImageView
+
+            android:id="@+id/img_calender"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_gravity="right"
+            android:src="@drawable/ic_outline_calendar_today_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <app.weather.view.CustomTextView
+            android:id="@+id/tv_temp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/_35"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <app.weather.view.CustomTextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Haze"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <app.weather.view.CustomTextView
+
+                android:layout_width="wrap_content"
+                android:id="@+id/tv_1_day"
+
+                android:layout_height="wrap_content"
+                android:text="Mon"
+                android:textColor="@color/white" />
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21/03"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_1"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_cloud_24" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <app.weather.view.CustomTextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tv_2_day"
+
+                android:layout_height="wrap_content"
+                android:text="Tue"
+                android:textColor="@color/white" />
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_2"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="21/03"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_2"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_cloud_24" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <app.weather.view.CustomTextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tv_3_day"
+
+                android:layout_height="wrap_content"
+                android:text="Wed"
+                android:textColor="@color/white" />
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_3"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="21/03"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_3"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_cloud_24" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <app.weather.view.CustomTextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tv_4_day"
+
+                android:layout_height="wrap_content"
+                android:text="Thu"
+                android:textColor="@color/white" />
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_4"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="21/03"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_4"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_cloud_24" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <app.weather.view.CustomTextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tv_5_day"
+
+                android:layout_height="wrap_content"
+                android:text="Fri"
+                android:textColor="@color/white" />
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_5"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="21/03"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_5"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_cloud_24" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <app.weather.view.CustomTextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tv_6_day"
+
+                android:layout_height="wrap_content"
+                android:text="Sat"
+                android:textColor="@color/white" />
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_6"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="21/03"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_6"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_cloud_24" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <app.weather.view.CustomTextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tv_7_day"
+
+                android:layout_height="wrap_content"
+                android:text="Sun"
+                android:textColor="@color/white" />
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_7"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="21/03"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_7"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_cloud_24" />
+        </LinearLayout>
+
+
+        <!--
+    <LinearLayout
+            android:layout_width="wrap_content"
+
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <app.weather.view.CustomTextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="Mon"
+                android:textColor="@color/white" />
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_8"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="21/03"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_cloud_24" />
+        </LinearLayout>
+-->
+
+
+    </LinearLayout>
+
+    <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+        android:id="@+id/aa_chart_view_1"
+
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+    </com.github.aachartmodel.aainfographics.aachartcreator.AAChartView>
+
+    <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+        android:id="@+id/aa_chart_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aa_chart_view_1">
+
+    </com.github.aachartmodel.aainfographics.aachartcreator.AAChartView>
+
+    <View
+        android:id="@+id/view_1"
+
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/aa_chart_view_2"
+        tools:layout_editor_absoluteX="-8dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/view_1"
+        tools:layout_editor_absoluteX="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_time_1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mon"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_icon_1"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_cloud_24" />
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_temp_1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21/03"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_time_2"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="Mon"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_icon_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_cloud_24" />
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_temp_2"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="21/03"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_time_3"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="Mon"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_icon_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_cloud_24" />
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_temp_3"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="21/03"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_time_4"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="Mon"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_icon_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_cloud_24" />
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_temp_4"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="21/03"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_time_5"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="Mon"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_icon_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_cloud_24" />
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_temp_5"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="21/03"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_time_6"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="Mon"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_icon_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_cloud_24" />
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_temp_6"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="21/03"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_time_7"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="Mon"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_icon_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_cloud_24" />
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_temp_7"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="21/03"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_time_8"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="Mon"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_icon_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_cloud_24" />
+
+            <app.weather.view.CustomTextView
+                android:id="@+id/tv_temp_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21/03"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_2"
+
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <app.weather.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="Probability of precipitation"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <app.weather.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="NA"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <app.weather.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:padding="3dp"
+                    android:text="East wind"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <app.weather.view.CustomTextView
+                    android:id="@+id/tv_east_wind"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="NA"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <app.weather.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:padding="3dp"
+                    android:text="HUM"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <app.weather.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="NA"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <app.weather.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:padding="3dp"
+                    android:text="UV"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <app.weather.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="NA"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <app.weather.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:padding="3dp"
+                    android:text="Precipitation"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <app.weather.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="NA"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <app.weather.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:padding="3dp"
+                    android:text="Perceived temperature"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <app.weather.view.CustomTextView
+                    android:id="@+id/tv_temperature"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="NA"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <app.weather.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:padding="3dp"
+                    android:text="Visibility"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <app.weather.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="NA"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <app.weather.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:padding="3dp"
+                    android:text="Pressure"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <app.weather.view.CustomTextView
+                    android:id="@+id/tv_pressure"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="NA"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

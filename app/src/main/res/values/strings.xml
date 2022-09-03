@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="_35">35°</string>
+    <string name="degree_symbol">°</string>
+</resources>
